@@ -6,18 +6,9 @@ terraform {
     }
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 3.26.0"
+      version = "4.36.1"
     }
   }
 
   required_version = ">= 0.15"
-
-  backend "remote" {
-    organization = "hashicorp"
-
-    workspaces {
-      name = "sentinel-example"
-    }
-  }
-
 }

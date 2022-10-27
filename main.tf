@@ -1,5 +1,12 @@
 provider "aws" {
   region = var.region
+  access_key = var.aws_access_key_id
+  secret_key = var.aws_secret_access_key
+  token = var.aws_session_token
+  
+#   assume_role {
+#     role_arn     = "awssg-hc2-aws_julianna.tetreault_test-developer-732790439478@hashicorp.com"
+#   }
 }
 
 data "aws_ami" "ubuntu" {
